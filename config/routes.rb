@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   #
   # get 'movies/edit'
 
+  namespace :admin do
+    resources :users
+  end
+
   resources :movies do #refactored code from above to this, makes available al possible routes
     resources :reviews, only: [:new, :create]
   end
