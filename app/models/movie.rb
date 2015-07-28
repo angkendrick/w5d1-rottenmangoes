@@ -21,6 +21,10 @@ class Movie < ActiveRecord::Base
 
   validate :release_date_is_in_the_future
 
+  #attr_accessor :poster
+
+  mount_uploader :poster, PosterUploader
+
   def review_average
     # add check against reviews.size = 0
     # add this method to views where average is needed <%= @movie.review_average %>/10
