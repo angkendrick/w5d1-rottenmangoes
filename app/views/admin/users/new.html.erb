@@ -1,0 +1,6 @@
+<% if current_user.admin? %>
+    <%= link_to 'Back to all users', admin_users_path %>
+    <%= render 'users/form' %>
+<% else %>
+    <h1>No Access</h1>
+<% end %>
